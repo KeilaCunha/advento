@@ -1,0 +1,195 @@
+/* Base */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 1;
+    padding: 0;
+    background-color: #61605c;
+    color: #363434;
+    box-sizing: border-box; /* Adiciona o box-sizing para incluir padding e border no cálculo de largura e altura */
+}
+
+/* Cabeçalho */
+.header-background {
+    position: relative;
+    text-align: center;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(183, 217, 233);
+    background-image: url('img.jpg');
+    background-size: 150px 150px;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+header h1, header h3 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Seção de opções */
+.options {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.options h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Adiciona a capacidade de os ícones quebrarem linha quando necessário */
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 15px 25px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    text-decoration: none; /* Remove a sublinhado do link */
+}
+
+.icon span {
+    font-size: 1.2em;
+    color: #363fbb;
+}
+
+/* Efeito de hover nos ícones */
+.icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(12, 155, 55, 0.1);
+}
+
+.icon:hover span {
+    color: #ac859d; /* Muda a cor do texto ao passar o mouse */
+}
+
+/* Link de Voltar */
+.back {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #727ae2;
+    color: white;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.back:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do calendário */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.day {
+    background-color: #5a8682;
+    border: 2px solid #ffffff;
+    border-radius: 50%; /* Faz o dia ser redondo */
+    width: 100px; /* Define o tamanho fixo do círculo */
+    height: 100px; /* Define o tamanho fixo do círculo */
+    padding: 0; /* Remove qualquer padding para garantir que o tamanho seja fixo */
+    text-align: center;
+    display: flex; /* Usado para centralizar o texto */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    align-items: center; /* Centraliza o texto verticalmente */
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em; /* Ajusta o tamanho do texto conforme necessário */
+}
+
+/* Efeito ao passar o mouse */
+.day:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(231, 227, 227, 0.2);
+}
+
+/* Responsividade - Media Queries */
+@media (max-width: 768px) {
+    /* Ajuste para tablets e dispositivos móveis em paisagem */
+    .icons {
+        flex-direction: column;
+    }
+
+    .icon span {
+        font-size: 1.1em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .back {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #363434; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto branca */
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 10px 0; /* Padding para dar um espaçamento adequado */
+    position: relative; /* Mantém o rodapé no final da página */
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para smartphones */
+    .header-background {
+        background-size: 150px 150px;
+        padding: 10px;
+    }
+
+    .options h2 {
+        font-size: 1.5em;
+    }
+
+    .icons {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .icon span {
+        font-size: 1em;
+    }
+
+    .back {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    header h1, header h3 {
+        font-size: 1.2em;
+    }
+}
