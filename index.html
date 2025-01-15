@@ -4,39 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Cabeçalho Principal -->
-    <div class="header-background">
+    <!-- Cabeçalho -->
+    <header class="header-background">
         <h1>Eventos Especiais</h1>
         <h3>Escolha o evento abaixo</h3>
-    </div>
+    </header>
 
-    <!-- Seção de opções com textos de eventos -->
-    <div class="options">
-        <h2>Eventos em destaque</h2>
-        <div class="icons">
-            <!-- Evento: Advento de Páscoa -->
-            <a href="paginaprincipal.html" class="icon" title="Advento de Páscoa">
-                <span>Advento de Páscoa</span>
-            </a>
-
-            <!-- Evento: Advento de Natal -->
-            <a href="advento_natal.html" class="icon" title="Advento de Natal">
-                <span>Advento de Natal (Em breve)</span>
-            </a>
-
-            <!-- Evento: Dia das Crianças -->
-            <a href="dia_criancas.html" class="icon" title="Dia das Crianças">
-                <span>Dia das Crianças (Em breve)</span>
-            </a>
+    <!-- Cards de Eventos -->
+    <section class="events-section">
+        <h2>Eventos em Destaque</h2>
+        <div class="cards-container">
+            <!-- Card 1: Advento de Páscoa -->
+            <div class="card">
+                <img src="img.jpg" alt="Advento de Páscoa">
+                <div class="card-content">
+                    <h3>Advento de Páscoa 2025</h3>
+                    <p>Uma jornada especial durante o tempo da Páscoa.</p>
+                    <a href="paginaprincipal.html" class="btn-action">Saiba Mais</a>
+                </div>
+            </div>
+            <!-- Card 2: Advento de Natal -->
+            <div class="card">
+                <img src="advento_natal.jpg" alt="Advento de Natal">
+                <div class="card-content">
+                    <h3>Advento de Natal (Em breve)</h3>
+                    <p>Prepare-se para celebrar o Natal com alegria.</p>
+                    <a href="advento_natal.html" class="btn-action">Saiba Mais</a>
+                </div>
+            </div>
+            <!-- Card 3: Dia das Crianças -->
+            <div class="card">
+                <img src="dia_criancas.jpg" alt="Dia das Crianças">
+                <div class="card-content">
+                    <h3>Dia das Crianças (Em breve)</h3>
+                    <p>Comemore o Dia das Crianças de forma inesquecível.</p>
+                    <a href="dia_criancas.html" class="btn-action">Saiba Mais</a>
+                </div>
+            </div>
         </div>
-    </div>
-    <br>
+    </section>
+
+    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2024 - Todos os direitos reservados</p>
+        <p>&copy; 2025 - Todos os direitos reservados</p>
     </footer>
 
 </body>
