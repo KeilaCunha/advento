@@ -1,195 +1,190 @@
-/* Base */
+/* Estilo base */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    margin: 1;
+    margin: 0;
     padding: 0;
-    background-color: #61605c;
+    background-color: #FFFFFF; /* Branco claro como fundo */
     color: #363434;
-    box-sizing: border-box; /* Adiciona o box-sizing para incluir padding e border no cálculo de largura e altura */
+    box-sizing: border-box;
+    overflow-x: hidden; /* Impede o overflow horizontal */
 }
 
 /* Cabeçalho */
 .header-background {
-    position: relative;
+    background: linear-gradient(135deg, #FFEB3B, #03A9F4); /* Amarelo Claro e Azul Claro */
+    padding: 30px 10px;
     text-align: center;
-    padding: 5px;
-    color: rgb(0, 0, 0);
-    background-color: rgb(183, 217, 233);
-    background-image: url('img.jpg');
-    background-size: 150px 150px;
-    background-position: left center;
-    background-repeat: no-repeat;
-}
-
-header h1, header h3 {
-    margin: 0;
-    padding: 10px 0;
-}
-
-header p {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
-/* Seção de opções */
-.options {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.options h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Adiciona a capacidade de os ícones quebrarem linha quando necessário */
-}
-
-.icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    padding: 15px 25px;
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-    text-decoration: none; /* Remove a sublinhado do link */
-}
-
-.icon span {
-    font-size: 1.2em;
-    color: #363fbb;
-}
-
-/* Efeito de hover nos ícones */
-.icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 6px rgba(12, 155, 55, 0.1);
-}
-
-.icon:hover span {
-    color: #ac859d; /* Muda a cor do texto ao passar o mouse */
-}
-
-/* Link de Voltar */
-.back {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #727ae2;
     color: white;
-    border: 2px solid #ffffff;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.back:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.header-background h1, .header-background h3 {
+    margin: 0;
 }
 
-/* Estilo do calendário */
-.calendar {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+.header-background h1 {
+    font-size: 2em; /* Tamanho maior no desktop */
+}
+
+.header-background h3 {
+    font-size: 1.3em;
+}
+
+/* Seção de Cards */
+.events-section {
+    padding: 5px 5px;
+    text-align: center;
+}
+
+.events-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #4CAF50; /* Verde Menta */
+}
+
+/* Container de Cards */
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 10px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 10px;
+}
+
+.card img {
+    width: 50%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.card-content {
     padding: 20px;
 }
 
-.day {
-    background-color: #5a8682;
-    border: 2px solid #ffffff;
-    border-radius: 50%; /* Faz o dia ser redondo */
-    width: 100px; /* Define o tamanho fixo do círculo */
-    height: 100px; /* Define o tamanho fixo do círculo */
-    padding: 0; /* Remove qualquer padding para garantir que o tamanho seja fixo */
-    text-align: center;
-    display: flex; /* Usado para centralizar o texto */
-    justify-content: center; /* Centraliza o texto horizontalmente */
-    align-items: center; /* Centraliza o texto verticalmente */
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 1.2em; /* Ajusta o tamanho do texto conforme necessário */
+.card h3 {
+    font-size: 1.6em;
+    color: #FF5722; /* Laranja vibrante */
 }
 
-/* Efeito ao passar o mouse */
-.day:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 8px rgba(231, 227, 227, 0.2);
+.card p {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 20px;
 }
 
-/* Responsividade - Media Queries */
-@media (max-width: 768px) {
-    /* Ajuste para tablets e dispositivos móveis em paisagem */
-    .icons {
-        flex-direction: column;
-    }
-
-    .icon span {
-        font-size: 1.1em;
-    }
-
-    header p {
-        font-size: 1em;
-    }
-
-    .back {
-        font-size: 1em;
-        padding: 8px 16px;
-    }
+/* Botão de Ação (Saiba Mais) */
+.btn-action {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #FF5722; /* Laranja */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
-/* Estilo do rodapé */
+.btn-action:hover {
+    background-color: #FF9F7F; /* Laranja claro */
+}
+
+/* Efeitos ao passar o mouse no card */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Rodapé */
 footer {
-    background-color: #363434; /* Cor de fundo escura */
-    color: #fff; /* Cor do texto branca */
-    text-align: center; /* Centraliza o conteúdo */
-    padding: 10px 0; /* Padding para dar um espaçamento adequado */
-    position: relative; /* Mantém o rodapé no final da página */
-    bottom: 0;
+    background-color: #4CAF50; /* Verde Menta */
+    color: white;
+    text-align: center;
+    padding: 1px 0;
+    position: relative;
     width: 100%;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
-footer p {
-    margin: 0;
-    padding: 0;
+/* Responsividade */
+@media (max-width: 1024px) {
+    .header-background h1 {
+        font-size: 1.8em; /* Tamanho ajustado para tablets */
+    }
+
+    .header-background h3 {
+        font-size: 1.2em;
+    }
+
+    .events-section h2 {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-background {
+        padding: 25px 10px; /* Menos espaçamento */
+    }
+
+    .events-section h2 {
+        font-size: 2em;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Menor espaçamento entre os cards */
+    }
+
+    .card {
+        width: 90%; /* Cards ocupam mais espaço */
+        margin-bottom: 15px;
+    }
+
+    .card h3 {
+        font-size: 1.4em;
+    }
+
+    .card p {
+        font-size: 0.9em;
+    }
+
+    .btn-action {
+        font-size: 1em;
+        padding: 8px 18px;
+    }
 }
 
 @media (max-width: 480px) {
-    /* Ajustes para smartphones */
-    .header-background {
-        background-size: 150px 150px;
-        padding: 10px;
+    .header-background h1 {
+        font-size: 1.5em; /* Tamanho ainda menor para celulares */
     }
 
-    .options h2 {
-        font-size: 1.5em;
+    .header-background h3 {
+        font-size: 1.1em;
     }
 
-    .icons {
-        justify-content: center;
-        gap: 10px;
+    .events-section h2 {
+        font-size: 1.8em;
     }
 
-    .icon span {
-        font-size: 1em;
+    .card h3 {
+        font-size: 1.3em;
     }
 
-    .back {
+    .card p {
+        font-size: 0.8em;
+    }
+
+    .btn-action {
         font-size: 0.9em;
         padding: 8px 16px;
-    }
-
-    header h1, header h3 {
-        font-size: 1.2em;
     }
 }
